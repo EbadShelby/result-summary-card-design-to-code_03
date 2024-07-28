@@ -19,7 +19,14 @@
 
   --ff-base: "Hanken Grotesk", "sans-serif";
 
-  --spacing: ;
+  --spacing-xsmall: 0.25em;
+  --spacing-small: 0.5em;
+  --spacing-regular: 1em;
+  --spacing-medium: 2em;
+  --spacing-large: 3em;
+
+  --gap-small: 1rem;
+  --gap-regular: 2rem;
 
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
