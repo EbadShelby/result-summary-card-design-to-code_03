@@ -33,11 +33,12 @@
   --fs-500: 0.9375rem;
   --fs-600: 1rem;
   --fs-700: 1.125rem;
-  --fs-800: 2rem;
-  --fs-900: 3rem;
+  --fs-800: 1.25rem;
+  --fs-900: 1.5rem;
+  --fs-1000: 3.5rem;
 
   --fs-heading: var(--fs-700);
-  --fw-heading: var(--fw-bold);
+  --fw-heading: var(--fw-medium);
   --fs-body: var(--fs-700);
 
 }
@@ -100,7 +101,99 @@ h6 {
 }
 
 /* ========|| General Styling ||========= */
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-body);
+  text-align: center;
+  /* display: grid;
+  place-content: center; */
+}
 
 /* ==========|| Main Styling ||========== */
+.result-summary {
+  display: grid;
+  max-width: 37.5rem;
+  grid-template-columns: 1fr 1fr;
+}
 
+.result {
+  background: linear-gradient(var(--clr-primary-gradient-800));
+  
+}
+
+.result__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+}
+
+.result__score {
+  width: 10rem;
+  background: linear-gradient(var(--clr-primary-gradient-900));
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  color: var(--clr-neutral-100);
+}
+.result__score p:first-child {
+  font-size: var(--fs-1000);
+  font-weight: var(--fw-bold);
+  display: block;
+  line-height: 1.1;
+}
+.result__score p:last-child {
+  opacity: .5;
+  font-size: var(--fs-400);
+}
+
+.result__rate {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-100);
+}
+.result__info {
+  font-size: var(--fs-400);
+}
+
+.summary {
+  font-weight: var(--fw-bold);
+}
+
+.summary__title {
+  font-size: var(--fs-heading);
+  text-align: start;
+}
+
+.summary--grid-flow {
+  display: grid;
+  gap: var(--gap-small);
+}
+
+.summary__item {
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 1em;
+  font-size: var(--fs-500);
+
+}
+.summary__item:nth-child(1) {
+  background-color: hsl(from var(--clr-secondary-red) h s l / .1);
+}
+.summary__item:nth-child(2) {
+  background-color: hsl(from var(--clr-secondary-orange) h s l / .1);
+}
+.summary__item:nth-child(3) {
+  background-color: hsl(from var(--clr-secondary-green) h s l / .1);
+}
+.summary__item:nth-child(4) {
+  background-color: hsl(from var(--clr-secondary-blue) h s l / .1);
+}
 /* ============|| Utilities ||=========== */
+.clr-gray {
+  color: var(--clr-neutral-300);
+}
+
+.clr-darkgray {
+  color: var(--clr-neutral-800);
+}
