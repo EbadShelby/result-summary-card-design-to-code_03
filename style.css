@@ -1,6 +1,6 @@
 /* ========|| Custom Properties ||======== */
 :root {
-  --clr-primary-gradient-900: hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0);
+  --clr-primary-gradient-900: hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, .0);
   --clr-primary-gradient-800: hsl(252, 100%, 67%), hsl(241, 81%, 54%);
 
   --clr-secondary-red: hsl(0, 100%, 67%);
@@ -234,4 +234,20 @@ body {
 }
 .clr-blue {
   color: var(--clr-secondary-blue);
+}
+
+/* ===========|| Breakpoints ||========== */
+@media (max-width: 34.375em ) {
+  body {
+    place-content: normal;
+  }
+  .result-summary {
+    grid-template-columns: 1fr;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+  }
+
+  .result {
+    border-radius: 0 0 1.5em 1.5em;
+  }
 }
